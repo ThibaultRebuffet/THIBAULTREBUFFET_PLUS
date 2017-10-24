@@ -1,10 +1,14 @@
-<div class="backgroundContainer">
-    <svg *ngFor="let groundItem of svgPaths.containers"
-        width="1620px"
-        height="840px"
-        fill="red"
-        stroke="black"
-        stroke-width="3">
-        <path d="M80 50h575v575h-575z M226,89C196.5626662926,105.8950698193,146.8950698193,155.5626662926,130,185S94.3129733853,359.7542543498,115,413S269.0571053871,592.4589593431,339,584S503.8035948891,402.201134604,508,325S480.4019319857,141.0493863086,434,107S273.0455099353,66.395354572,226,89Z"></path>
-    </svg>
+<div class="backgroundContainer"
+    (click)="init()">
+    <div *ngFor="let groundItem of svgPaths; let i = index"
+        class="spongeBobPotatoe">
+        <svg width="800px"
+            height="800px"
+            [attr.fill]="groundItem.color"
+            stroke="black"
+            stroke-width="3"
+            [ngStyle]="{'transform': groundItem.scale}">
+            <path [attr.d]="groundItem.path"></path>
+        </svg>
+    </div>
 </div>

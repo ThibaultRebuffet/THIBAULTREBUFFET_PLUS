@@ -1,0 +1,10 @@
+.spongeBobPotatoe{
+    position: absolute;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+/*.spongeBobPotatoe svg path{
+    transition: 300ms
+}*/
